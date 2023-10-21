@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pizzería</h1>
+    </header>
+    <main>
+        <section class="menu">
+            <h2>Menú de Pizzas</h2>
+            <div class="pizza">
+                <h3>Pizza Margarita</h3>
+                <p>Tomate, mozzarella, albahaca</p>
+                <p>Precio: $10</p>
+                <button onclick="agregarAlCarrito('Margarita', 10)">Agregar al carrito</button>
+            </div>
+            <div class="pizza">
+                <h3>Pizza Pepperoni</h3>
+                <p>Tomate, mozzarella, pepperoni</p>
+                <p>Precio: $12</p>
+                <button onclick="agregarAlCarrito('Pepperoni', 12)">Agregar al carrito</button>
+            </div>
+            
+            <div class="pizza">
+                <h3>Pizza Vegetariana</h3>
+                <p>Tomate, mozzarella, champiñones, pimientos</p>
+                <p>Precio: $11</p>
+                <button onclick="agregarAlCarrito('Vegetariana', 11)">Agregar al carrito</button>
+            </div>
+            <div class="pizza">
+                <h3>Pizza Napolitana</h3>
+                <p>Tomate, mozzarella, albahaca </p>
+                <p>Precio: $8 </p>
+                <button onclick="agregarAlCarrito('Napolitana', 8 )">Agregar al carrito</button>
+            </div>
+        </section>
+        <section class="carrito">
+            <h2>Carrito de Compras</h2>
+            <ul id="carrito-list">
+                <!-- El carrito se actualizará aquí -->
+            </ul>
+            <p>Total: $<span id="total">0</span></p>
+        </section>
+        <section class="pago">
+            <h2>Forma de Pago</h2>
+            <label>
+                <input type="radio" name="formaPago" value="tarjeta"> Tarjeta de Crédito
+            </label>
+            <label>
+                <input type="radio" name="formaPago" value="efectivo"> Efectivo
+            </label>
+            <button onclick="procesarPago()">Pagar</button>
+        </section>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+    
+
+</html>
